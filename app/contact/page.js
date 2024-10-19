@@ -40,7 +40,7 @@ function ContactForm() {
 
       if (res.ok) {
         alert('Details saved successfully!');
-        window.location.href = '/thank-you'; // Redirect to the thank you page after successful submission
+        window.location.href = '/thankyou'; // Redirect to the thank you page after successful submission
       } else {
         alert('Failed to save details.');
       }
@@ -50,69 +50,87 @@ function ContactForm() {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-blue-50 p-10">
-      <div className="bg-white p-10 rounded-lg shadow-lg w-full max-w-md">
-        {/* Logo */}
-        <div className="mb-6 text-center">
-          <img src="/logo.png" alt="Hexa Climate Logo" className="h-12 w-12 mx-auto" />
-        </div>
-
-        {/* Display Category */}
-        {category && (
-          <div className="text-center mb-6">
-            <h2 className="text-xl font-semibold">
-              You selected: <span className="text-blue-600">{category}</span>
-            </h2>
+    <div className="flex flex-col lg:flex-row h-screen">
+      {/* Form Section */}
+      <div className="flex flex-col justify-center items-center lg:w-1/2 bg-blue-50 p-10 lg:p-20 h-full">
+        <div className=" p-10 rounded-lg w-full max-w-md">
+          {/* Logo */}
+          <div className="mb-6 text-left">
+            <img src="/hexa-logo.png" alt="Hexa Climate Logo" className="h-16 lg:h-20 w-auto object-contain" />
           </div>
-        )}
 
-        {/* Form */}
-        <form onSubmit={handleSubmit}>
-          <h1 className="text-2xl font-bold text-center mb-6">
-            Please Share Your Coordinates And We Will Get Back To You:
-          </h1>
+          {/* Display Category */}
+          {category && (
+            <div className="text-left mb-6 ">
+              <h2 className="text-xl font-semibold">
+                You Category: <span className="text-blue-600">{category}</span>
+              </h2>
+            </div>
+          )}
 
-          {/* Form Fields */}
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            value={formData.name}
-            onChange={handleChange}
-            className="mb-4 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-          />
-          <input
-            type="text"
-            name="organization"
-            placeholder="Organization Name"
-            value={formData.organization}
-            onChange={handleChange}
-            className="mb-4 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Company Email"
-            value={formData.email}
-            onChange={handleChange}
-            className="mb-4 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-          />
-          <textarea
-            name="message"
-            placeholder="Message (Optional)"
-            value={formData.message}
-            onChange={handleChange}
-            className="mb-4 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
-          />
+          {/* Form */}
+          <form onSubmit={handleSubmit}>
+            <h1 className="text-2xl font-bold text-left mb-6">
+              Please Share Your Coordinates And We Will Get Back To You:
+            </h1>
 
-          {/* Submit Button */}
-          <button
-            type="submit"
-            className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700"
-          >
-            Submit
-          </button>
-        </form>
+            {/* Form Fields */}
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              value={formData.name}
+              onChange={handleChange}
+              className="mb-4 w-full p-3 border border-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+            />
+            <input
+              type="text"
+              name="organization"
+              placeholder="Organization Name"
+              value={formData.organization}
+              onChange={handleChange}
+              className="mb-4 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Company Email"
+              value={formData.email}
+              onChange={handleChange}
+              className="mb-4 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+            />
+            <textarea
+              name="message"
+              placeholder="Message (Optional)"
+              value={formData.message}
+              onChange={handleChange}
+              className="mb-4 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+            />
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg shadow-md hover:from-blue-700 hover:to-blue-800"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+
+      {/* Image Section */}
+      <div className="flex justify-center items-center lg:w-1/2 h-full relative">
+        <div className="relative max-w-lg w-full">
+          <img
+            src="/form-image.png" // Replace with your image path
+            alt="Renewable Energy"
+            className=""
+          />
+          {/* <div className="absolute bottom-4 left-4 bg-white p-4 rounded-lg shadow-lg flex items-center space-x-4">
+            <img src="/logo.png" alt="Hexa Climate Logo" className="h-8 w-8" />
+            <p className="text-gray-700 font-medium">Connecting the dots for a better world!</p>
+          </div> */}
+        </div>
       </div>
     </div>
   );
