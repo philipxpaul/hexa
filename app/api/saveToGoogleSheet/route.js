@@ -1,20 +1,22 @@
 import { google } from 'googleapis';
 
-// Handle POST requests
-export async function POST(req) {
+export async function POST(req, res) {
+  // Log to verify route handling
+  console.log("Handling request in route.js");
+
+  if (req.method !== 'POST') {
+    return res.status(405).json({ message: 'Method Not Allowed' });
+  }
+
+  // Destructuring the request body
+  const { category, name, organization, email, message } = await req.json(); // Correcting here to use await req.json()
+
+  // Check if all required fields are present
+  if (!category || !name || !organization || !email) {
+    return res.status(400).json({ message: 'Missing required fields' });
+  }
+
   try {
-    // Parse the JSON body of the request
-    const body = await req.json();
-    const { category, name, organization, email, message } = body;
-
-    // Validate request data
-    if (!category || !name || !organization || !email) {
-      return new Response(JSON.stringify({ message: 'Missing required fields' }), {
-        status: 400,
-        headers: { 'Content-Type': 'application/json' },
-      });
-    }
-
     // Setup Google Sheets API credentials
     const auth = new google.auth.GoogleAuth({
       credentials: {
@@ -23,29 +25,25 @@ export async function POST(req) {
       },
       scopes: ['https://www.googleapis.com/auth/spreadsheets'],
     });
+
     const sheets = google.sheets({ version: 'v4', auth });
     const spreadsheetId = process.env.GOOGLE_SHEET_ID;
 
     // Append data to Google Sheet
     await sheets.spreadsheets.values.append({
       spreadsheetId,
-      range: 'Sheet1!A:E',
+      range: 'Sheet1!A:E', // Update the range according to your sheet
       valueInputOption: 'USER_ENTERED',
       requestBody: {
         values: [[category, name, organization, email, message]],
       },
     });
 
-    return new Response(JSON.stringify({ message: 'Success' }), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' },
-    });
-
+    // Send success response
+    return res.status(200).json({ message: 'Success' });
   } catch (error) {
-    console.error('Error saving to Google Sheets:', error);
-    return new Response(JSON.stringify({ message: 'Internal Server Error' }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    // Log error and send response
+    console.error('Error appending data to Google Sheets:', error);
+    return res.status(500).json({ message: 'Internal Server Error' });
   }
 }
