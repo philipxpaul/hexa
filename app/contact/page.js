@@ -1,11 +1,10 @@
 'use client';
 
-import { useSearchParams, useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { Suspense, useState } from 'react';
 
-export default function Contact() {
+function ContactForm() {
   const searchParams = useSearchParams();
-  const router = useRouter(); // Add useRouter hook
   const category = searchParams.get('category');
 
   const [formData, setFormData] = useState({
@@ -41,7 +40,7 @@ export default function Contact() {
 
       if (res.ok) {
         alert('Details saved successfully!');
-        router.push('/thankyou'); // Redirect to thankyou page
+        window.location.href = '/thank-you'; // Redirect to the thank you page after successful submission
       } else {
         alert('Failed to save details.');
       }
@@ -116,5 +115,13 @@ export default function Contact() {
         </form>
       </div>
     </div>
+  );
+}
+
+export default function Contact() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ContactForm />
+    </Suspense>
   );
 }
