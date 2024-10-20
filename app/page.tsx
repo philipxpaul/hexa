@@ -53,7 +53,7 @@ export default function HeroSection() {
           />
         </div>
 
-        <h2 className="text-3xl font-bold mb-10 relative z-10">Hexa's active projects:</h2>
+        <h2 className="text-3xl font-bold mb-10 relative z-10">Hexa&aposs active projects:</h2>
 
         <div className="space-y-8 relative z-10">
           {/* Project Card 1 */}
