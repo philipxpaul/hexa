@@ -25,11 +25,11 @@ export default function ThankYou() {
               <span className="font-semibold text-black">📍 Address:</span> <br />
               14th Floor, Vatika Business Park, Sohna Road, Gurugram, Haryana-122018
             </p>
-            <p className="mb-4">
+            <p className="mb-4 text-black">
               <span className="font-semibold text-black">📞 Contact Number:</span> <br />
               +91 9899282359
             </p>
-            <p>
+            <p className="mb-4 text-black">
               <span className="font-semibold text-black">✉️ Contact Email:</span> <br />
               Carbon@Hexaclimate.com
             </p>
