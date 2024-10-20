@@ -21,15 +21,12 @@ function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Combine category and form data to send to Google Sheets
     const payload = {
       category,
       ...formData,
     };
 
-    // Call Google Sheets API to save the data
     try {
-      console.log(payload);
       const res = await fetch('/api/saveToGoogleSheet', {
         method: 'POST',
         headers: {
@@ -40,7 +37,7 @@ function ContactForm() {
 
       if (res.ok) {
         alert('Details saved successfully!');
-        window.location.href = '/thankyou'; // Redirect to the thank you page after successful submission
+        window.location.href = '/thankyou';
       } else {
         alert('Failed to save details.');
       }
@@ -50,9 +47,9 @@ function ContactForm() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row lg:h-screen">
+    <div className="flex flex-col lg:flex-row lg:h-screen bg-blue-50">
       {/* Form Section */}
-      <div className="flex flex-col justify-center items-center w-full lg:w-1/2 bg-blue-50 p-10 lg:p-20 h-auto lg:h-full">
+      <div className="flex flex-col justify-center items-center w-full lg:w-1/2 p-10 lg:p-20 h-auto lg:h-full">
         <div className="bg-white p-10 rounded-lg w-full max-w-lg shadow-md">
           {/* Logo */}
           <div className="mb-6 text-left">
@@ -66,7 +63,7 @@ function ContactForm() {
           {/* Display Category */}
           {category && (
             <div className="text-left mb-6">
-              <h2 className="text-xl font-semibold">
+              <h2 className="text-xl font-semibold text-black lg:text-blue-600">
                 Selected Category: <span className="text-blue-600">{category}</span>
               </h2>
             </div>
@@ -74,7 +71,7 @@ function ContactForm() {
 
           {/* Form */}
           <form onSubmit={handleSubmit}>
-            <h1 className="text-2xl font-bold text-left mb-6">
+            <h1 className="text-2xl font-bold text-left mb-6 text-black">
               Please Share Your Coordinates And We Will Get Back To You:
             </h1>
 
@@ -85,7 +82,7 @@ function ContactForm() {
               placeholder="Name"
               value={formData.name}
               onChange={handleChange}
-              className="mb-4 w-full p-3 border border-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+              className="mb-4 w-full p-3 border border-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-black"
             />
             <input
               type="text"
@@ -93,7 +90,7 @@ function ContactForm() {
               placeholder="Organization Name"
               value={formData.organization}
               onChange={handleChange}
-              className="mb-4 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+              className="mb-4 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-black"
             />
             <input
               type="email"
@@ -101,14 +98,14 @@ function ContactForm() {
               placeholder="Company Email"
               value={formData.email}
               onChange={handleChange}
-              className="mb-4 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+              className="mb-4 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-black"
             />
             <textarea
               name="message"
               placeholder="Message (Optional)"
               value={formData.message}
               onChange={handleChange}
-              className="mb-4 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+              className="mb-4 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-black"
             />
 
             {/* Submit Button */}
@@ -126,7 +123,7 @@ function ContactForm() {
       <div className="flex justify-center items-center w-full lg:w-1/2 h-96 lg:h-full p-10 lg:p-20 bg-white">
         <div className="w-full max-w-lg">
           <img
-            src="/form-image.png" // Replace with your image path
+            src="/form-image.png"
             alt="Renewable Energy"
             className="w-full h-full object-contain rounded-lg shadow-md"
           />
