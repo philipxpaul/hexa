@@ -106,7 +106,7 @@ export default function HeroSection() {
               </div>
             </div>
             <div className="ml-6">
-              <h3 className="text-xl font-bold">Mangrove</h3>
+              <h3 className="text-xl font-bold text-black">Mangrove</h3>
               <p className="text-gray-600">Community based | India</p>
               <p className="text-gray-600">VERRA | 15,000 VERs/year | Available from Dec 2027</p>
             </div>
