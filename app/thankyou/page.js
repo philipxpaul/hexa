@@ -21,7 +21,7 @@ export default function ThankYou() {
           {/* Contact Information */}
           <div className="mt-6">
             <h2 className="text-lg lg:text-xl font-bold mb-2 text-black">Contact Information</h2>
-            <p className="mb-4">
+            <p className="mb-4 text-black">
               <span className="font-semibold text-black">📍 Address:</span> <br />
               14th Floor, Vatika Business Park, Sohna Road, Gurugram, Haryana-122018
             </p>
