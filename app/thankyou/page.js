@@ -15,22 +15,22 @@ export default function ThankYou() {
             />
           </div>
           {/* Thank You Message */}
-          <h1 className="text-2xl lg:text-3xl font-bold mb-4">
+          <h1 className="text-2xl lg:text-3xl font-bold mb-4 text-black">
             Thank You for Filling the Form, We Will Write Back to You Shortly!
           </h1>
           {/* Contact Information */}
           <div className="mt-6">
-            <h2 className="text-lg lg:text-xl font-bold mb-2">Contact Information</h2>
+            <h2 className="text-lg lg:text-xl font-bold mb-2 text-black">Contact Information</h2>
             <p className="mb-4">
-              <span className="font-semibold">📍 Address:</span> <br />
+              <span className="font-semibold text-black">📍 Address:</span> <br />
               14th Floor, Vatika Business Park, Sohna Road, Gurugram, Haryana-122018
             </p>
             <p className="mb-4">
-              <span className="font-semibold">📞 Contact Number:</span> <br />
+              <span className="font-semibold text-black">📞 Contact Number:</span> <br />
               +91 9899282359
             </p>
             <p>
-              <span className="font-semibold">✉️ Contact Email:</span> <br />
+              <span className="font-semibold text-black">✉️ Contact Email:</span> <br />
               Carbon@Hexaclimate.com
             </p>
           </div>

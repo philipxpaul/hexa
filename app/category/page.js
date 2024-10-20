@@ -22,7 +22,7 @@ export default function Category() {
         </div>
 
         {/* Title */}
-        <h1 className="text-3xl w-3/4 lg:text-4xl font-bold text-center lg:text-left">
+        <h1 className="text-3xl w-3/4 lg:text-4xl font-bold text-center lg:text-left text-black">
           I/My Company Is Best Identified As:
         </h1>
 

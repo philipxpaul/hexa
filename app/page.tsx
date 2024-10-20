@@ -53,7 +53,7 @@ export default function HeroSection() {
           />
         </div>
 
-        <h2 className="text-3xl font-bold mb-10 relative z-10">Hexa&aposs active projects:</h2>
+        <h2 className="text-3xl font-bold mb-10 relative z-10 text-black ">Hexa&aposs active projects:</h2>
 
         <div className="space-y-8 relative z-10">
           {/* Project Card 1 */}
@@ -64,7 +64,7 @@ export default function HeroSection() {
               </div>
             </div>
             <div className="ml-6">
-              <h3 className="text-xl font-bold">Industrial Biochar</h3>
+              <h3 className="text-xl font-bold text-black">Industrial Biochar</h3>
               <p className="text-gray-600">10TPD | Agriculture Residue based | India</p>
               <p className="text-gray-600">Puro | 6,500 CORCs/year | Available from Jul 2025</p>
             </div>
@@ -78,7 +78,7 @@ export default function HeroSection() {
               </div>
             </div>
             <div className="ml-6">
-              <h3 className="text-xl font-bold">ARR</h3>
+              <h3 className="text-xl font-bold text-black">ARR</h3>
               <p className="text-gray-600">Scalable | Small scale | No harvest | India</p>
               <p className="text-gray-600">VERRA | 18,000 VERs/year | Available from Jan 2026</p>
             </div>
@@ -92,7 +92,7 @@ export default function HeroSection() {
               </div>
             </div>
             <div className="ml-6">
-              <h3 className="text-xl font-bold">Household biogas</h3>
+              <h3 className="text-xl font-bold text-black">Household biogas</h3>
               <p className="text-gray-600">Small scale | Rural installations | India</p>
               <p className="text-gray-600">Gold Standard | 24,000 GS VERs/year | Available from Aug 2025</p>
             </div>
