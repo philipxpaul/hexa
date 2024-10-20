@@ -105,7 +105,7 @@ function ContactForm() {
               placeholder="Message (Optional)"
               value={formData.message}
               onChange={handleChange}
-              className="mb-4 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-black"
+              className="mb-4 w-full p-3 border border-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-black"
             />
 
             {/* Submit Button */}

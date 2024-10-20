@@ -26,10 +26,10 @@ export default function HeroSection() {
         </h1>
 
         {/* Description */}
-        <p className="mt-6 text-lg lg:text-xl text-gray-600">
+        <p className="mt-6 text-lg lg:text-xl text-black">
           Hexa Climate offers Carbon Credits to Commercial & Industrial Consumers under long term offtake with <span className="font-bold">Zero pre-finance</span> requirements.
         </p>
-        <p className="mt-4 text-lg lg:text-xl text-gray-600">
+        <p className="mt-4 text-lg lg:text-xl text-black">
           Our Carbon portfolio is assessed on ESG and UN-PRI. We closely work with some of the best on-ground implementation partners, carbon consultants & dMRV providers.
         </p>
 
@@ -59,7 +59,7 @@ export default function HeroSection() {
           {/* Project Card 1 */}
           <div className="flex bg-white-10 shadow-lg p-6 rounded-lg items-center">
             <div className="flex-shrink-0">
-              <div className="h-12 w-12 flex items-center justify-center rounded-full bg-blue-500 text-white text-2xl font-bold">
+              <div className="h-12 w-12 flex items-center justify-center rounded-full bg-blue-500 text-black text-2xl font-bold">
                 1
               </div>
             </div>
@@ -73,7 +73,7 @@ export default function HeroSection() {
           {/* Project Card 2 */}
           <div className="flex bg-white-10 shadow-lg p-6 rounded-lg items-center">
             <div className="flex-shrink-0">
-              <div className="h-12 w-12 flex items-center justify-center rounded-full bg-blue-500 text-white text-2xl font-bold">
+              <div className="h-12 w-12 flex items-center justify-center rounded-full bg-blue-500 text-black text-2xl font-bold">
                 2
               </div>
             </div>
@@ -87,7 +87,7 @@ export default function HeroSection() {
           {/* Project Card 3 */}
           <div className="flex bg-white-10 shadow-lg p-6 rounded-lg items-center">
             <div className="flex-shrink-0">
-              <div className="h-12 w-12 flex items-center justify-center rounded-full bg-blue-500 text-white text-2xl font-bold">
+              <div className="h-12 w-12 flex items-center justify-center rounded-full bg-blue-500 text-black text-2xl font-bold">
                 3
               </div>
             </div>
@@ -101,7 +101,7 @@ export default function HeroSection() {
           {/* Project Card 4 */}
           <div className="flex bg-white-10 shadow-lg p-6 rounded-lg items-center">
             <div className="flex-shrink-0">
-              <div className="h-12 w-12 flex items-center justify-center rounded-full bg-blue-500 text-white text-2xl font-bold">
+              <div className="h-12 w-12 flex items-center justify-center rounded-full bg-blue-500 text-black text-2xl font-bold">
                 4
               </div>
             </div>
