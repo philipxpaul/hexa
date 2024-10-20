@@ -50,20 +50,24 @@ function ContactForm() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row h-screen">
+    <div className="flex flex-col lg:flex-row lg:h-screen">
       {/* Form Section */}
-      <div className="flex flex-col justify-center items-center lg:w-1/2 bg-blue-50 p-10 lg:p-20 h-full">
-        <div className=" p-10 rounded-lg w-full max-w-md">
+      <div className="flex flex-col justify-center items-center w-full lg:w-1/2 bg-blue-50 p-10 lg:p-20 h-auto lg:h-full">
+        <div className="bg-white p-10 rounded-lg w-full max-w-lg shadow-md">
           {/* Logo */}
           <div className="mb-6 text-left">
-            <img src="/hexa-logo.png" alt="Hexa Climate Logo" className="h-16 lg:h-20 w-auto object-contain" />
+            <img
+              src="/hexa-logo.png"
+              alt="Hexa Climate Logo"
+              className="h-16 lg:h-20 w-auto object-contain"
+            />
           </div>
 
           {/* Display Category */}
           {category && (
-            <div className="text-left mb-6 ">
+            <div className="text-left mb-6">
               <h2 className="text-xl font-semibold">
-                You Category: <span className="text-blue-600">{category}</span>
+                Selected Category: <span className="text-blue-600">{category}</span>
               </h2>
             </div>
           )}
@@ -119,17 +123,13 @@ function ContactForm() {
       </div>
 
       {/* Image Section */}
-      <div className="flex justify-center items-center lg:w-1/2 h-full relative">
-        <div className="relative max-w-lg w-full">
+      <div className="flex justify-center items-center w-full lg:w-1/2 h-96 lg:h-full p-10 lg:p-20 bg-white">
+        <div className="w-full max-w-lg">
           <img
             src="/form-image.png" // Replace with your image path
             alt="Renewable Energy"
-            className=""
+            className="w-full h-full object-contain rounded-lg shadow-md"
           />
-          {/* <div className="absolute bottom-4 left-4 bg-white p-4 rounded-lg shadow-lg flex items-center space-x-4">
-            <img src="/logo.png" alt="Hexa Climate Logo" className="h-8 w-8" />
-            <p className="text-gray-700 font-medium">Connecting the dots for a better world!</p>
-          </div> */}
         </div>
       </div>
     </div>
