@@ -63,7 +63,7 @@ function ContactForm() {
           {/* Display Category */}
           {category && (
             <div className="text-left mb-6">
-              <h2 className="text-xl font-semibold text-black lg:text-blue-600">
+              <h2 className="text-xl font-semibold text-black lg:text-blue-600" >
                 Selected Category: <span className="text-blue-600">{category}</span>
               </h2>
             </div>

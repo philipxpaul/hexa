@@ -12,56 +12,56 @@ export default function HeroSection() {
   return (
     <div className="flex flex-col lg:flex-row min-h-screen">
       {/* Left Side - Main Content */}
-      <div className="lg:w-1/2 flex flex-col justify-center items-start px-4 py-6 lg:p-20 bg-blue-50 min-h-screen">
+      <div className="flex-1 flex flex-col justify-center items-start p-8 lg:p-10 bg-blue-50">
         {/* Logo */}
         <div className="mb-4 lg:mb-6">
           <img
             src="/hexa-logo.png"
             alt="Hexa Climate Logo"
-            className="h-12 w-auto lg:h-20 object-contain"
+            className="h-11 w-auto lg:h-20 object-contain"
           />
         </div>
 
         {/* Title */}
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-blue-600 leading-tight mb-4">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-600 leading-tight mb-4">
           Carbon Neutrality
           <br />
           <span className="text-black">as a Service</span>
         </h1>
 
         {/* Description */}
-        <p className="text-base md:text-lg lg:text-xl text-black mb-3">
+        <p className="text-base md:text-lg text-black mb-2">
           Hexa Climate offers Carbon Credits to Commercial & Industrial Consumers under long-term offtake with <span className="font-bold">Zero pre-finance</span> requirements.
         </p>
-        <p className="text-base md:text-lg lg:text-xl text-black mb-6">
+        <p className="text-base md:text-lg text-black mb-4">
           Our Carbon portfolio is assessed on ESG and UN-PRI. We closely work with some of the best on-ground implementation partners, carbon consultants & dMRV providers.
         </p>
 
         {/* Button */}
         <button
           onClick={handleConnectClick}
-          className="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-lg font-semibold rounded-full shadow-md hover:from-blue-700 hover:to-blue-800"
+          className="px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-base font-semibold rounded-full shadow-md hover:from-blue-700 hover:to-blue-800"
         >
           Connect with team
         </button>
       </div>
 
       {/* Right Side - Project Cards Section */}
-      <div className="relative lg:w-1/2 flex flex-col items-center justify-center p-4 lg:p-20 bg-white min-h-screen">
+      <div className="relative flex-1 flex flex-col items-center justify-center p-4 lg:p-10 bg-white">
         {/* Background Logo */}
         <div className="absolute inset-0 flex justify-center items-center opacity-10">
           <img
             src="/hexa-icon.png"
             alt="Hexa Logo Background"
-            className="w-3/4 lg:w-1/2 h-auto object-contain"
+            className="w-2/3 lg:w-1/2 h-auto object-contain"
           />
         </div>
 
-        <h2 className="text-2xl md:text-3xl font-bold mb-6 relative z-10 text-black text-center lg:text-left">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4 relative z-10 text-black text-center">
           Hexa&apos;s Active Projects:
         </h2>
 
-        <div className="space-y-4 w-full max-w-md relative z-10">
+        <div className="space-y-3 w-full max-w-md relative z-10">
           {/* Project Cards */}
           {[
             {
@@ -87,14 +87,14 @@ export default function HeroSection() {
           ].map((project, index) => (
             <div
               key={index}
-              className="flex items-start bg-white shadow-lg p-4 rounded-lg"
+              className="flex items-start bg-white shadow-md p-3 rounded-lg"
             >
               <div className="flex-shrink-0">
-                <div className="h-10 w-10 flex items-center justify-center rounded-full bg-blue-500 text-white text-xl font-bold">
+                <div className="h-8 w-8 flex items-center justify-center rounded-full bg-blue-500 text-white text-lg font-bold">
                   {index + 1}
                 </div>
               </div>
-              <div className="ml-4">
+              <div className="ml-3">
                 <h3 className="text-lg font-bold text-black">{project.title}</h3>
                 <p className="text-gray-600 text-sm">{project.details}</p>
                 <p className="text-gray-600 text-sm">{project.credits}</p>
