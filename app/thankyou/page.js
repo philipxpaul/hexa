@@ -1,12 +1,10 @@
 'use client';
 
 export default function ThankYou() {
- 
   return (
-   
     <div className="flex flex-col lg:flex-row h-screen">
       {/* Left Section - Thank You Message */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-10 lg:p-20 bg-blue-50">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-10 lg:p-20 bg-blue-50 h-screen lg:h-full">
         <div className="w-full max-w-lg">
           {/* Logo */}
           <div className="mb-6">
@@ -40,16 +38,15 @@ export default function ThankYou() {
       </div>
 
       {/* Right Section - Logo */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-10 lg:p-20 bg-white">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-10 lg:p-20 bg-white h-screen lg:h-full">
         <div className="w-full flex items-center justify-center">
           <img
             src="/hexa-icon1.png"
             alt="Hexa Climate Logo"
-            className="h-64 lg:h-full w-auto object-contain"
+            className="h-full w-auto object-contain"
           />
         </div>
       </div>
     </div>
-    
   );
 }
