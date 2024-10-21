@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import Header from '../component/header';
+
 
 export default function Category() {
   const router = useRouter();
@@ -17,7 +17,7 @@ export default function Category() {
 
   return (
     <>
-    {/* <Header/> */}
+   
       {loading ? (
         // Loading screen
         <div className="flex justify-center items-center h-screen bg-blue-50">

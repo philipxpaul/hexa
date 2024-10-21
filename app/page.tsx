@@ -2,7 +2,7 @@
 // components/HeroSection.js
 'use client';
 import { useRouter } from 'next/navigation';
-import Header from './component/header';
+
 
 
 export default function HeroSection() {
@@ -13,8 +13,7 @@ export default function HeroSection() {
   };
 
   return (
-    <>
-      {/* <Header /> */}
+
       <div className="flex flex-col lg:flex-row min-h-screen">
         {/* Left Side - Main Content */}
         <div className="flex-1 flex flex-col justify-center items-start p-8 lg:p-10 bg-blue-50">
@@ -109,6 +108,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-    </>
+
   );
 }

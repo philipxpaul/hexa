@@ -3,7 +3,7 @@
 import { useSearchParams } from 'next/navigation';
 import { useRouter } from 'next/navigation';
 import { Suspense, useState } from 'react';
-import Header from '../component/header'
+
 
 function ContactForm() {
   const searchParams = useSearchParams();
