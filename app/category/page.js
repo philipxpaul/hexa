@@ -1,7 +1,6 @@
 // components/HeroSection.js
 'use client';
 import { useRouter } from 'next/navigation';
-import Header from '../Header';
 
 export default function HeroSection() {
   const router = useRouter();
