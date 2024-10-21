@@ -23,21 +23,21 @@ export default function Category() {
         </div>
       ) : (
         // Main content
-        <div className="flex flex-col lg:flex-row min-h-screen w-full">
+        <div className="flex flex-col lg:flex-row h-screen w-full">
           {/* Right Section - Graphic Section */}
-          <div className="flex items-center justify-center w-full lg:w-1/2 p-4 lg:p-20 bg-white h-1/2 lg:h-full">
+          <div className="flex items-center justify-center w-full lg:w-1/2 p-4 lg:p-20 bg-white h-full">
             {/* Diagram or Content */}
             <div className="flex items-center justify-center w-full max-w-xs lg:max-w-md h-full">
               <img
                 src="Flowww.png"
                 alt="Flowchart"
-                className="rounded-lg object-contain w-2/3 lg:w-auto max-w-sm lg:max-w-sm h-auto"
+                className="rounded-lg object-contain w-3/4 lg:w-auto max-w-sm h-auto"
               />
             </div>
           </div>
 
           {/* Left Section - Category Buttons Section */}
-          <div className="flex flex-col justify-center items-center lg:items-center w-full lg:w-1/2 p-4 lg:p-20 bg-blue-50 space-y-4 h-1/2 lg:h-full">
+          <div className="flex flex-col justify-center items-center w-full lg:w-1/2 p-4 lg:p-20 bg-blue-50 space-y-4 h-full">
             {/* Logo */}
             <div className="mb-6">
               <img src="hexa-logo.png" alt="Hexa Climate Logo" className="h-12 w-auto lg:h-20" />
