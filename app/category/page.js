@@ -3,7 +3,6 @@
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
-
 export default function Category() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
