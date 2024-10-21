@@ -23,21 +23,21 @@ export default function Category() {
         </div>
       ) : (
         // Main content
-        <div className="flex flex-col lg:flex-row h-screen bg-blue-50 p-10 lg:p-20 space-y-8 lg:space-y-0 lg:space-x-10">
+        <div className="flex flex-col lg:flex-row min-h-screen w-full">
           {/* Left Section */}
-          <div className="flex flex-col items-center lg:items-start w-full lg:w-1/2 space-y-8">
+          <div className="flex flex-col justify-center items-center lg:items-start w-full lg:w-1/2 p-10 lg:p-20 bg-blue-50 space-y-4 h-full">
             {/* Logo */}
             <div className="mb-6">
               <img src="hexa-logo.png" alt="Hexa Climate Logo" className="h-16 w-auto lg:h-20" />
             </div>
 
             {/* Title */}
-            <h1 className="text-3xl w-3/4 lg:text-4xl font-bold text-center lg:text-left text-black">
+            <h1 className="text-3xl lg:text-4xl font-bold text-center lg:text-left text-black ">
               I/My Company Is Best Identified As:
             </h1>
 
             {/* Category Buttons */}
-            <div className="flex flex-col items-center lg:items-start space-y-4 w-full">
+            <div className="flex flex-col items-center lg:items-start space-y-2 w-full max-w-lg">
               {[
                 'Credit Offtaker',
                 'Implementation Partner',
@@ -49,7 +49,7 @@ export default function Category() {
                 <button
                   key={index}
                   onClick={() => handleCategoryClick(category)}
-                  className="w-full lg:w-80 px-6 py-3 bg-gradient-to-r from-blue-400 to-blue-600 text-white rounded-lg shadow-md hover:from-blue-500 hover:to-blue-700 transition duration-200"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-400 to-blue-600 text-white rounded-lg shadow-md hover:from-blue-500 hover:to-blue-700 transition duration-200"
                 >
                   {category}
                 </button>
@@ -58,12 +58,10 @@ export default function Category() {
           </div>
 
           {/* Right Section */}
-          <div className="flex items-center">
-            {/* Your Diagram or Content */}
-            <div className="flex flex-col items-center justify-center">
-              <div className="w-full max-w-lg">
-                <img src="graphic01.png" alt="Flowchart" className="rounded-lg" />
-              </div>
+          <div className="flex items-center justify-center w-full lg:w-1/2 p-10 lg:p-20 bg-white h-full">
+            {/* Diagram or Content */}
+            <div className="w-full max-w-lg">
+              <img src="graphic01.png" alt="Flowchart" className="rounded-lg object-contain w-full h-auto" />
             </div>
           </div>
         </div>
