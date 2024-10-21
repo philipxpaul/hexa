@@ -39,9 +39,9 @@ export default function Category() {
           {/* Left Section - Category Buttons Section */}
           <div className="flex flex-col justify-center items-center w-full lg:w-1/2 p-4 lg:p-20 bg-blue-50 space-y-4 h-full">
             {/* Logo */}
-            <div className="mb-6">
+            {/* <div className="mb-6">
               <img src="hexa-logo.png" alt="Hexa Climate Logo" className="h-12 w-auto lg:h-20" />
-            </div>
+            </div> */}
 
             {/* Title */}
             <h1 className="text-2xl lg:text-4xl font-bold text-center text-black">
@@ -49,24 +49,25 @@ export default function Category() {
             </h1>
 
             {/* Category Buttons */}
-            <div className="grid grid-cols-2 gap-4 w-full max-w-lg lg:flex lg:flex-col lg:items-center lg:space-y-2 lg:w-full">
+            <div className="grid grid-cols-2 gap-4 w-full max-w-lg lg:max-w-2xl">
               {[
                 'Credit Offtaker',
                 'Implementation Partner',
                 'dMRV Provider',
                 'Carbon Consultant',
-                'Aggregator/Intermediary/Trader',
+                'Aggregator/ Intermediary/Trader',
                 'VVB',
               ].map((category, index) => (
                 <button
                   key={index}
                   onClick={() => handleCategoryClick(category)}
-                  className="w-full px-4 py-2 bg-gradient-to-r from-blue-400 to-blue-600 text-white rounded-lg shadow-md hover:from-blue-500 hover:to-blue-700 transition duration-200"
+                  className="flex justify-center items-center h-20 w-full bg-gradient-to-r from-blue-400 to-blue-600 text-white rounded-lg shadow-md hover:from-blue-500 hover:to-blue-700 transition duration-200"
                 >
                   {category}
                 </button>
               ))}
             </div>
+
           </div>
         </div>
       )}
