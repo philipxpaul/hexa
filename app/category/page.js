@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import Header from '../component/header';
 
 export default function Category() {
   const router = useRouter();
@@ -16,6 +17,7 @@ export default function Category() {
 
   return (
     <>
+    {/* <Header/> */}
       {loading ? (
         // Loading screen
         <div className="flex justify-center items-center h-screen bg-blue-50">
@@ -25,27 +27,31 @@ export default function Category() {
         // Main content
         <div className="flex flex-col lg:flex-row min-h-screen w-full">
           {/* Right Section - Graphic Section */}
-          <div className="flex items-center justify-center w-full lg:w-1/2 p-10 lg:p-20 bg-white h-full">
+          <div className="flex items-center justify-center w-full lg:w-1/2 p-4 lg:p-20 bg-white h-1/2 lg:h-full">
             {/* Diagram or Content */}
-            <div className="w-full max-w-lg">
-              <img src="Standee_02.jpg" alt="Flowchart" className="rounded-lg object-contain w-auto h-auto" />
+            <div className="flex items-center justify-center w-full max-w-xs lg:max-w-md h-full">
+              <img
+                src="Flowww.png"
+                alt="Flowchart"
+                className="rounded-lg object-contain w-2/3 lg:w-auto max-w-sm lg:max-w-sm h-auto"
+              />
             </div>
           </div>
 
           {/* Left Section - Category Buttons Section */}
-          <div className="flex flex-col justify-center items-center lg:items-start w-full lg:w-1/2 p-10 lg:p-20 bg-blue-50 space-y-4 h-full">
+          <div className="flex flex-col justify-center items-center lg:items-center w-full lg:w-1/2 p-4 lg:p-20 bg-blue-50 space-y-4 h-1/2 lg:h-full">
             {/* Logo */}
             <div className="mb-6">
-              <img src="hexa-logo.png" alt="Hexa Climate Logo" className="h-16 w-auto lg:h-20" />
+              <img src="hexa-logo.png" alt="Hexa Climate Logo" className="h-12 w-auto lg:h-20" />
             </div>
 
             {/* Title */}
-            <h1 className="text-3xl lg:text-4xl font-bold text-center lg:text-left text-black">
+            <h1 className="text-2xl lg:text-4xl font-bold text-center text-black">
               I/My Company Is Best Identified As:
             </h1>
 
             {/* Category Buttons */}
-            <div className="grid grid-cols-2 gap-4 w-full max-w-lg lg:flex lg:flex-col lg:items-start lg:space-y-2 lg:w-full">
+            <div className="grid grid-cols-2 gap-4 w-full max-w-lg lg:flex lg:flex-col lg:items-center lg:space-y-2 lg:w-full">
               {[
                 'Credit Offtaker',
                 'Implementation Partner',
@@ -57,7 +63,7 @@ export default function Category() {
                 <button
                   key={index}
                   onClick={() => handleCategoryClick(category)}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-400 to-blue-600 text-white rounded-lg shadow-md hover:from-blue-500 hover:to-blue-700 transition duration-200"
+                  className="w-full px-4 py-2 bg-gradient-to-r from-blue-400 to-blue-600 text-white rounded-lg shadow-md hover:from-blue-500 hover:to-blue-700 transition duration-200"
                 >
                   {category}
                 </button>

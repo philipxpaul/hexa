@@ -3,6 +3,7 @@
 import { useSearchParams } from 'next/navigation';
 import { useRouter } from 'next/navigation';
 import { Suspense, useState } from 'react';
+import Header from '../component/header'
 
 function ContactForm() {
   const searchParams = useSearchParams();
@@ -16,14 +17,35 @@ function ContactForm() {
     message: '',
   });
 
+  const [errors, setErrors] = useState({
+    name: false,
+    organization: false,
+    email: false,
+  });
+
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: false });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validate required fields
+    const newErrors = {
+      name: !formData.name,
+      organization: !formData.organization,
+      email: !formData.email,
+    };
+    setErrors(newErrors);
+
+    if (newErrors.name || newErrors.organization || newErrors.email) {
+      setLoading(false);
+      return;
+    }
+
     setLoading(true);
 
     const payload = {
@@ -96,24 +118,30 @@ function ContactForm() {
                   placeholder="Name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="mb-4 w-full p-3 border border-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-black"
+                  className={`mb-1 w-full p-3 border ${errors.name ? 'border-red-500' : 'border-blue-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-black`}
                 />
+                {errors.name && <p className="text-red-500 mb-4">Name is required.</p>}
+
                 <input
                   type="text"
                   name="organization"
                   placeholder="Organization Name"
                   value={formData.organization}
                   onChange={handleChange}
-                  className="mb-4 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-black"
+                  className={`mb-1 w-full p-3 border ${errors.organization ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-black`}
                 />
+                {errors.organization && <p className="text-red-500 mb-4">Organization Name is required.</p>}
+
                 <input
                   type="email"
                   name="email"
                   placeholder="Company Email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="mb-4 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-black"
+                  className={`mb-1 w-full p-3 border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-black`}
                 />
+                {errors.email && <p className="text-red-500 mb-4">Email is required.</p>}
+
                 <textarea
                   name="message"
                   placeholder="Message (Optional)"
