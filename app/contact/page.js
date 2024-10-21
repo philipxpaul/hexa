@@ -4,7 +4,6 @@ import { useSearchParams } from 'next/navigation';
 import { useRouter } from 'next/navigation';
 import { Suspense, useState } from 'react';
 
-
 function ContactForm() {
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -76,7 +75,7 @@ function ContactForm() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row lg:h-screen bg-blue-50">
+    <div className="flex flex-col lg:flex-row h-screen bg-blue-50">
       {loading ? (
         // Loader Section
         <div className="flex justify-center items-center h-screen w-full bg-blue-50">
@@ -85,8 +84,8 @@ function ContactForm() {
       ) : (
         <>
           {/* Form Section */}
-          <div className="flex flex-col justify-center items-center w-full lg:w-1/2 p-5 lg:p-20 h-auto lg:h-full">
-            <div className="bg-white p-8 rounded-lg w-full max-w-lg shadow-md">
+          <div className="flex flex-col justify-center items-center w-full lg:w-1/2 p-5 lg:p-20 h-screen lg:h-full">
+            <div className="bg-white p-5 rounded-lg w-full max-w-lg shadow-md">
               {/* Logo */}
               <div className="mb-6 text-left">
                 <img
@@ -98,8 +97,8 @@ function ContactForm() {
 
               {/* Display Category */}
               {category && (
-                <div className="text-left mb-6">
-                  <h2 className="text-xl font-semibold text-black lg:text-blue-600">
+                <div className="text-left mb-4">
+                  <h2 className="text-lg font-semibold text-black lg:text-blue-600">
                     Selected Category: <span className="text-blue-600">{category}</span>
                   </h2>
                 </div>
@@ -107,7 +106,7 @@ function ContactForm() {
 
               {/* Form */}
               <form onSubmit={handleSubmit}>
-                <h1 className="text-2xl font-bold text-left mb-6 text-black">
+                <h1 className="text-xl lg:text-2xl font-bold text-left mb-4 text-black">
                   Drop your details, we’ll connect
                 </h1>
 
@@ -118,9 +117,9 @@ function ContactForm() {
                   placeholder="Name"
                   value={formData.name}
                   onChange={handleChange}
-                  className={`mb-1 w-full p-3 border ${errors.name ? 'border-red-500' : 'border-blue-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-black`}
+                  className={`mb-2 w-full p-3 border ${errors.name ? 'border-red-500' : 'border-blue-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-black`}
                 />
-                {errors.name && <p className="text-red-500 mb-4">Name is required.</p>}
+                {errors.name && <p className="text-red-500 mb-2">Name is required.</p>}
 
                 <input
                   type="text"
@@ -128,9 +127,9 @@ function ContactForm() {
                   placeholder="Organization Name"
                   value={formData.organization}
                   onChange={handleChange}
-                  className={`mb-1 w-full p-3 border ${errors.organization ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-black`}
+                  className={`mb-2 w-full p-3 border ${errors.organization ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-black`}
                 />
-                {errors.organization && <p className="text-red-500 mb-4">Organization Name is required.</p>}
+                {errors.organization && <p className="text-red-500 mb-2">Organization Name is required.</p>}
 
                 <input
                   type="email"
@@ -138,16 +137,16 @@ function ContactForm() {
                   placeholder="Company Email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`mb-1 w-full p-3 border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-black`}
+                  className={`mb-2 w-full p-3 border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-black`}
                 />
-                {errors.email && <p className="text-red-500 mb-4">Email is required.</p>}
+                {errors.email && <p className="text-red-500 mb-2">Email is required.</p>}
 
                 <textarea
                   name="message"
                   placeholder="Message (Optional)"
                   value={formData.message}
                   onChange={handleChange}
-                  className="mb-4 w-full p-3 border border-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-black"
+                  className="mb-4 w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-black"
                 />
 
                 {/* Submit Button */}
@@ -162,7 +161,7 @@ function ContactForm() {
           </div>
 
           {/* Image Section - Hidden on Mobile */}
-          <div className="hidden lg:flex justify-center items-center w-full lg:w-1/2 h-96 lg:h-full p-8 lg:p-20 bg-white">
+          <div className="hidden lg:flex justify-center items-center w-full lg:w-1/2 h-full p-8 lg:p-20 bg-white">
             <div className="w-full max-w-lg">
               <img
                 src="/form-image.png"
