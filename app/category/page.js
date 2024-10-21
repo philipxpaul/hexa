@@ -24,20 +24,28 @@ export default function Category() {
       ) : (
         // Main content
         <div className="flex flex-col lg:flex-row min-h-screen w-full">
-          {/* Left Section */}
-          <div className="flex flex-col justify-center items-center lg:items-start w-full lg:w-1/2 p-10 lg:p-20 bg-blue-50 space-y-4 h-full">
+          {/* Right Section - Graphic Section */}
+          <div className="order-1 lg:order-none flex items-center justify-center w-full lg:w-1/2 p-10 lg:p-20 bg-white h-full">
+            {/* Diagram or Content */}
+            <div className="w-full max-w-lg">
+              <img src="graphic01.png" alt="Flowchart" className="rounded-lg object-contain w-full h-auto" />
+            </div>
+          </div>
+
+          {/* Left Section - Category Buttons Section */}
+          <div className="order-2 lg:order-none flex flex-col justify-center items-center lg:items-start w-full lg:w-1/2 p-10 lg:p-20 bg-blue-50 space-y-4 h-full">
             {/* Logo */}
             <div className="mb-6">
               <img src="hexa-logo.png" alt="Hexa Climate Logo" className="h-16 w-auto lg:h-20" />
             </div>
 
             {/* Title */}
-            <h1 className="text-3xl lg:text-4xl font-bold text-center lg:text-left text-black ">
+            <h1 className="text-3xl lg:text-4xl font-bold text-center lg:text-left text-black">
               I/My Company Is Best Identified As:
             </h1>
 
             {/* Category Buttons */}
-            <div className="flex flex-col items-center lg:items-start space-y-2 w-full max-w-lg">
+            <div className="grid grid-cols-2 gap-4 w-full max-w-lg lg:flex lg:flex-col lg:items-start lg:space-y-2 lg:w-full">
               {[
                 'Credit Offtaker',
                 'Implementation Partner',
@@ -54,14 +62,6 @@ export default function Category() {
                   {category}
                 </button>
               ))}
-            </div>
-          </div>
-
-          {/* Right Section */}
-          <div className="flex items-center justify-center w-full lg:w-1/2 p-10 lg:p-20 bg-white h-full">
-            {/* Diagram or Content */}
-            <div className="w-full max-w-lg">
-              <img src="graphic01.png" alt="Flowchart" className="rounded-lg object-contain w-full h-auto" />
             </div>
           </div>
         </div>

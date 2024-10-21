@@ -1,7 +1,7 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
 import { useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { Suspense, useState } from 'react';
 
 function ContactForm() {
@@ -133,8 +133,8 @@ function ContactForm() {
             </div>
           </div>
 
-          {/* Image Section */}
-          <div className="flex justify-center items-center w-full lg:w-1/2 h-96 lg:h-full p-8 lg:p-20 bg-white">
+          {/* Image Section - Hidden on Mobile */}
+          <div className="hidden lg:flex justify-center items-center w-full lg:w-1/2 h-96 lg:h-full p-8 lg:p-20 bg-white">
             <div className="w-full max-w-lg">
               <img
                 src="/form-image.png"
