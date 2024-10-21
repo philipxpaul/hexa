@@ -86,7 +86,7 @@ function ContactForm() {
               {/* Form */}
               <form onSubmit={handleSubmit}>
                 <h1 className="text-2xl font-bold text-left mb-6 text-black">
-                  Please Share Your Coordinates And We Will Get Back To You:
+                  Drop your details, we’ll connect
                 </h1>
 
                 {/* Form Fields */}

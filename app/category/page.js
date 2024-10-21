@@ -25,15 +25,15 @@ export default function Category() {
         // Main content
         <div className="flex flex-col lg:flex-row min-h-screen w-full">
           {/* Right Section - Graphic Section */}
-          <div className="order-1 lg:order-none flex items-center justify-center w-full lg:w-1/2 p-10 lg:p-20 bg-white h-full">
+          <div className="flex items-center justify-center w-full lg:w-1/2 p-10 lg:p-20 bg-white h-full">
             {/* Diagram or Content */}
             <div className="w-full max-w-lg">
-              <img src="graphic01.png" alt="Flowchart" className="rounded-lg object-contain w-full h-auto" />
+              <img src="Standee_02.jpg" alt="Flowchart" className="rounded-lg object-contain w-auto h-auto" />
             </div>
           </div>
 
           {/* Left Section - Category Buttons Section */}
-          <div className="order-2 lg:order-none flex flex-col justify-center items-center lg:items-start w-full lg:w-1/2 p-10 lg:p-20 bg-blue-50 space-y-4 h-full">
+          <div className="flex flex-col justify-center items-center lg:items-start w-full lg:w-1/2 p-10 lg:p-20 bg-blue-50 space-y-4 h-full">
             {/* Logo */}
             <div className="mb-6">
               <img src="hexa-logo.png" alt="Hexa Climate Logo" className="h-16 w-auto lg:h-20" />
