@@ -16,7 +16,7 @@ export default function ThankYou() {
           </div>
           {/* Thank You Message */}
           <h1 className="text-2xl lg:text-3xl font-bold mb-4 text-black">
-          Thanks for the details!
+          You'll hear from us soon!
           </h1>
           {/* Contact Information */}
           <div className="mt-6">

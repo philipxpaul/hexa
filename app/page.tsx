@@ -46,7 +46,7 @@ export default function HeroSection() {
             onClick={handleConnectClick}
             className="px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-base font-semibold rounded-full shadow-md hover:from-blue-700 hover:to-blue-800"
           >
-            Connect with team
+            Connect with Us
           </button>
         </div>
 
