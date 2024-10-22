@@ -16,7 +16,7 @@ export default function ThankYou() {
           </div>
           {/* Thank You Message */}
           <h1 className="text-2xl lg:text-3xl font-bold mb-4 text-black">
-            Thank You for Filling the Form, We Will Write Back to You Shortly!
+          Thanks for the details!
           </h1>
           {/* Contact Information */}
           <div className="mt-6">
@@ -38,12 +38,12 @@ export default function ThankYou() {
       </div>
 
       {/* Right Section - Logo */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-10 lg:p-20 bg-white h-screen lg:h-full">
-        <div className="w-full flex items-center justify-center">
+      <div className="hidden w-full lg:w-1/2 flex items-center justify-center p-10 lg:p-20 bg-white h-screen lg:h-full">
+        <div className="hidden w-full flex items-center justify-center">
           <img
             src="/hexa-icon1.png"
             alt="Hexa Climate Logo"
-            className="h-full w-auto object-contain"
+            className="hidden h-full w-auto object-contain"
           />
         </div>
       </div>

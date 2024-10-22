@@ -52,7 +52,7 @@ export default function Category() {
             <div className="grid grid-cols-2 gap-4 w-full max-w-lg lg:max-w-2xl">
               {[
                 'Credit Offtaker',
-                'Implementation Partner',
+                'Implementation        Partner',
                 'dMRV Provider',
                 'Carbon Consultant',
                 'Aggregator/ Intermediary/Trader',
