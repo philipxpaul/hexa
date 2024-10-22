@@ -45,7 +45,7 @@ export default function Category() {
 
             {/* Title */}
             <h1 className="text-2xl lg:text-4xl font-bold text-center text-black">
-              I/My Company Is Best Identified As:
+              I/my company is best identified as
             </h1>
 
             {/* Category Buttons */}
