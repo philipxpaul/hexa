@@ -50,23 +50,24 @@ export default function Category() {
 
             {/* Category Buttons */}
             <div className="grid grid-cols-2 gap-4 w-full max-w-lg lg:max-w-2xl">
-              {[
-                'Credit Offtaker',
-                'Implementation        Partner',
-                'dMRV Provider',
-                'Carbon Consultant',
-                'Aggregator/ Intermediary/Trader',
-                'VVB',
-              ].map((category, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleCategoryClick(category)}
-                  className="flex justify-center items-center h-20 w-full bg-gradient-to-r from-blue-400 to-blue-600 text-white rounded-lg shadow-md hover:from-blue-500 hover:to-blue-700 transition duration-200"
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
+  {[
+    'Credit Offtaker',
+    'Implementation Partner',
+    'dMRV Provider',
+    'Carbon Consultant',
+    'Aggregator/ Intermediary/Trader',
+    'VVB',
+  ].map((category, index) => (
+    <button
+      key={index}
+      onClick={() => handleCategoryClick(category)}
+      className="flex justify-center items-center h-20 w-full bg-gradient-to-r from-blue-400 to-blue-600 text-white rounded-lg shadow-md hover:from-blue-500 hover:to-blue-700 transition duration-200 break-words text-center"
+    >
+      {category}
+    </button>
+  ))}
+</div>
+
 
           </div>
         </div>
