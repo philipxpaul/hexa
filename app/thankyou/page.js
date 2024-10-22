@@ -31,7 +31,7 @@ export default function ThankYou() {
             </p>
             <p className="mb-4 text-black">
               <span className="font-semibold text-black">✉️ Contact Email:</span> <br />
-              Carbon@Hexaclimate.com
+              carbon@hexaclimate.com
             </p>
           </div>
         </div>
