@@ -62,7 +62,7 @@ export default function HeroSection() {
           </div>
 
           <h2 className="text-2xl md:text-3xl font-bold mb-4 relative z-10 text-black text-center">
-            Hexa&apos;s Active Projects:
+            Hexa&apos;s active Projects:
           </h2>
 
           <div className="space-y-3 w-full max-w-md relative z-10">
